@@ -6,7 +6,10 @@ import Liststudy from './page/homepage/Liststudy'
 import About from './page/homepage/About'
 import Contact from './page/homepage/Contact'
 import RootLayout from './layout/RootLayout'
-
+import Login from './page/homepage/addminpage/Login'
+import Addmin from './page/homepage/addminpage/homeAddmin/Addmin'
+import RootLayoutaddmin from './layout/RootLayoutaddmin'
+import Register from './page/homepage/addminpage/Register'
 export default function App() {
   const router=createBrowserRouter(
     createRoutesFromElements(
@@ -16,6 +19,13 @@ export default function App() {
         <Route path='/list-study' element={<Liststudy/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/regiseter' element={<Register/>}/>
+      
+      </Route>
+      <Route>
+        <Route path='/addminpage' element={<RootLayoutaddmin/>}/>
+        <Route index element={<Addmin/>}/>
       </Route>
     </Route>
     )
